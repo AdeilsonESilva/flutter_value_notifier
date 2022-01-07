@@ -25,11 +25,11 @@ class _HomePageState extends State<HomePage> {
             const Text(
               'You have pushed the button this many times:',
             ),
-            AnimatedBuilder(
-              animation: counter,
-              builder: (context, child) {
+            ValueListenableBuilder<int>(
+              valueListenable: counter,
+              builder: (context, value, child) {
                 return Text(
-                  '${counter.value}',
+                  '$value',
                   style: Theme.of(context).textTheme.headline4,
                 );
               },
