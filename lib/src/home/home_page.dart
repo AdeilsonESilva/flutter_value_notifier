@@ -12,19 +12,11 @@ class _HomePageState extends State<HomePage> {
   final counter = Counter();
 
   @override
-  void initState() {
-    super.initState();
-
-    counter.addListener(() {
-      setState(() {});
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
+    print('build');
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: const Text('Home Page'),
       ),
       body: Center(
         child: Column(
@@ -33,9 +25,14 @@ class _HomePageState extends State<HomePage> {
             const Text(
               'You have pushed the button this many times:',
             ),
-            Text(
-              '${counter.value}',
-              style: Theme.of(context).textTheme.headline4,
+            AnimatedBuilder(
+              animation: counter,
+              builder: (context, child) {
+                return Text(
+                  '${counter.value}',
+                  style: Theme.of(context).textTheme.headline4,
+                );
+              },
             ),
           ],
         ),
