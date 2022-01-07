@@ -35,4 +35,9 @@ class PostModel {
 
   factory PostModel.fromJson(String source) =>
       PostModel.fromMap(json.decode(source));
+
+  @override
+  String toString() {
+    return 'PostModel(userId: $userId, id: $id, title: $title, body: $body)';
+  }
 }
