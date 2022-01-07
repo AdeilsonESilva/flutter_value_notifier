@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
 
-    controller.addListener(() {
+    controller.counter$.addListener(() {
       setState(() {});
     });
   }
