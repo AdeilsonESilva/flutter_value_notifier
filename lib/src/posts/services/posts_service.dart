@@ -1,10 +1,10 @@
 import 'package:flutter_value_notifier/src/posts/models/post_model.dart';
 import 'package:uno/uno.dart';
 
-class PostsService {
+class PostService {
   final Uno uno;
 
-  PostsService(this.uno);
+  PostService(this.uno);
 
   Future<List<PostModel>> fetchPosts() async {
     final response =

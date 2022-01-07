@@ -12,8 +12,8 @@ class RequestMock extends Mock implements Request {}
 void main() {
   final unoMock = UnoMock();
 
-  final service = PostsService(unoMock);
-  test('get all posts', () async {
+  final service = PostService(unoMock);
+  test('should be get all posts', () async {
     when(() => unoMock.get(any())).thenAnswer((_) async => Response(
           data: jsonResponse,
           headers: {},
