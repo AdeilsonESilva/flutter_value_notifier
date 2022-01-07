@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_value_notifier/src/posts/posts_page.dart';
 
 import 'home/home_page.dart';
 
@@ -12,7 +13,7 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: const PostsPage(),
     );
   }
 }
