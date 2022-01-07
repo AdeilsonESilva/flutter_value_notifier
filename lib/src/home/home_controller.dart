@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class HomeController {
-  var counter$ = ValueNotifier(0);
+// like cubit
+class Counter extends ValueNotifier<int> {
+  Counter() : super(0);
 
-  int get counter => counter$.value;
-
-  void increment() => counter$.value++;
+  increment() => value++;
+  decrement() => value--;
 }

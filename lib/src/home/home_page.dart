@@ -9,22 +9,19 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final controller = HomeController();
-
-  int get _counter => controller.counter;
+  final counter = Counter();
 
   @override
   void initState() {
     super.initState();
 
-    controller.counter$.addListener(() {
+    counter.addListener(() {
       setState(() {});
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    print('build');
     return Scaffold(
       appBar: AppBar(
         title: Text('Home Page'),
@@ -37,14 +34,14 @@ class _HomePageState extends State<HomePage> {
               'You have pushed the button this many times:',
             ),
             Text(
-              '$_counter',
+              '${counter.value}',
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: controller.increment,
+        onPressed: counter.increment,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
