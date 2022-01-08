@@ -22,7 +22,7 @@ void main() {
           ],
         ));
 
-    await store.fetchProducts();
+    await store.fetchPosts();
   });
 
   test('should be change alter state to error', () async {
@@ -37,6 +37,6 @@ void main() {
           ],
         ));
 
-    await store.fetchProducts();
+    await store.fetchPosts();
   });
 }

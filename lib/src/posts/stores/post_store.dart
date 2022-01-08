@@ -7,7 +7,7 @@ class PostStore extends ValueNotifier<PostState> {
 
   PostStore(this.service) : super(InitialPostState());
 
-  Future fetchProducts() async {
+  Future fetchPosts() async {
     try {
       value = LoadingPostState();
       final posts = await service.fetchPosts();
