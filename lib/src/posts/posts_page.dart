@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_value_notifier/src/posts/states/post_state.dart';
 import 'package:flutter_value_notifier/src/posts/stores/post_store.dart';
-import 'package:provider/src/provider.dart';
+import 'package:provider/provider.dart';
 
 class PostsPage extends StatefulWidget {
   const PostsPage({Key? key}) : super(key: key);
